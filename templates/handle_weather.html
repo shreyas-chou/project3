@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block information %}
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p style="padding-left: 30px">
+	{% for weather in days_forecast %}
+	<b>High :</b> {{weather[0]}}<br>
+	<b> Low : </b>{{weather[1]}}<br>
+	<b> Daytime Forecast :</b> {{weather[2]}}<br>
+	<b> Nighttime Forecast : </b> {{weather[3]}}<br>
+		<br>
+
+	{% endfor %}
+	 <button onclick="goBack()">Go Back</button>
+
+	<script>
+	function goBack() {
+  	window.history.back();
+	}
+	</script> 
+	</p>
+</body>
+</html>
+{% endblock information %}
